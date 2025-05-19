@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="post">
+        <h1>Form to apply for Teaching assistants role for B.Tech First Year</h1>
+        <div>
+            <label for="username">Enter your username </label> <!-- for = "id" since unique -->
+            <input type="text" id="username" name="username" placeholder="Username goes here" required autofocus>
+        </div>
+
+        <div>
+            Enter your gender:
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender"value="female" >
+            <label for="female">Female</label>
+        </div>
+        
+        <div>
+            <label for="subjects">Enter the subject you can teach:</label>
+            <select name="subjects" id="subjects" required>
+                <option value="Engineering Physics">Engineering Physics</option>
+                <option value="Engineering Mechanics">Engineering Mechanics</option>
+                <option value="Introduction to C">Introduction to C</option>
+                <option value="Law for Engineers">Law for Engineers</option>
+                <option value="Sociology for Engineers">Sociology for Engineers</option>
+                <option value="Biology for Engineers">Biology for Engineers</option>
+                <option value="Basic Physics-1">Basic Physics-1</option>
+                <option value="General Chemistry">General Chemistry</option>
+                <option value="Mathematics for Life Sciences-1">Mathematics for Life Sciences-1</option>
+                <option value="Engineering Chemistry">Engineering Chemistry</option>
+                <option value="Basic Electrical Engineering">Basic Electrical Engineering</option>
+                <option value="Economics for Engineers">Economics for Engineers</option>
+                <option value="Aspects of Indian History for Engineers">Aspects of Indian History for Engineers</option>
+                <option value="Introduction to Environmental Studies">Introduction to Environmental Studies</option>
+                <option value="Applied Chemistry">Applied Chemistry</option>
+                <option value="Basic Physics-2">Basic Physics-2</option>
+                <option value="Mathematics for Life Sciences-2">Mathematics for Life Sciences-2</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="comment">Enter your comment here...</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <label for="terms">Do you except the Terms and Conditions?</label>
+            <input type="checkbox" id="terms" name="terms" required>
+        </div>
+        
+
+    </form>
+</body>
+</html>
