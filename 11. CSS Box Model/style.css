@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    background-color: aqua;
+}
+
+.box1 {
+    color:red;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid black;
+    width: 110px;
+}
+
+.box2 {
+    color:blue;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid black;
+    width: 110px;
+    box-sizing: border-box; /* This will include the padding and border in the width */
+}
+
+/*
+
+Concept of margin collapse
+
+If 2 elements are adjacent and have margins, the larger of the two margins will be used.
+Here, since both are same hence either margin will be used.
+If one was 30 and other 25 then margin would have been 30.
+
+*/

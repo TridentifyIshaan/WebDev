@@ -1,0 +1,39 @@
+h1{
+    color:aqua;
+}
+
+.yellow{
+    color:yellow;
+}
+
+.purple {
+    color:purple !important; /* This is an important rule */
+}
+
+.red {
+    color:red;
+}
+
+.italic{
+    font-style: italic;
+}
+
+/* This is called an attribute or class selector */
+/* It selects all elements with the attribute data-x set to a */
+[data-x=a]{
+    background-color: red;
+}
+
+/*
+This is just an example these classes doesn't exist in the main code
+Specificity is 1 + 10 + 10 + 10 + 10 = 41
+a = 1
+harryclass = 10
+rohan-class = 10
+href = 10
+pseudo-class ( hover ) = 10
+*/
+
+a.harryclass.rohan-class[href]:hover{
+    color:blueviolet;
+}
