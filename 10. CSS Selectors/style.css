@@ -1,0 +1,60 @@
+/*Element selector*/
+div {
+    background-color:lightblue;
+    font-weight: bold;
+    color: white;
+    padding-left: 5px;
+}
+
+/*Class selector*/
+.red {
+    background-color: red;
+}
+
+/*ID selector*/
+#green {
+    background-color: green;
+}
+
+/* Direct Child selector */
+div > p {
+    color:blue;
+    background-color: yellow;
+    padding-bottom: 5px;
+}
+
+/* Descendant selector */
+#green p {
+    color:blue;
+    background-color: yellow;
+    padding-bottom: 5px;
+}
+
+/* Universal selector */
+
+*{
+    margin-left: 1%;
+}
+
+/* Pseudo selectors */
+
+/*When you hover over the link*/
+a:hover {
+    color: red;
+}
+/*When you haven't visited the link*/
+a:link {
+    color:brown;
+}
+/*When you have visited the link*/
+a:visited {
+    color: green;
+}
+/*When you click on the link*/
+a:active {
+    background-color: blue;
+}
+/*When in class one, first child of paragraph attribute is there. */
+.one p:first-child {
+    background-color: aqua;
+}
