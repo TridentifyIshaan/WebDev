@@ -1,0 +1,56 @@
+/*Scroll bar*/
+.box{
+    width: 30vw;
+    height: 10vh;
+    margin: 10px;
+    border: 2px solid black;
+    overflow: scroll;
+}
+
+/*Scroll bar will be shown only when it overflows*/
+.box1{
+    width: 30vw;
+    height: 10vh;
+    margin: 10px;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+.box2{
+    width: 30vw;
+    height: 10vh;
+    margin: 10px;
+    border: 2px solid black;
+    overflow: auto;
+    /*Hides scroll bar for vertical direction*/
+    white-space: nowrap;
+}
+
+.box3{
+    width: 30vw;
+    height: 10vh;
+    margin: 10px;
+    border: 2px solid black;
+    overflow: hidden; /*To hide scroll bar*/
+    white-space: nowrap;
+    /*Adds ...*/
+    text-overflow: ellipsis;
+}
+
+.box4{
+    width: 20vw;
+    height: 10vh;
+    margin: 10px;
+    border: 2px solid black;
+    overflow: clip; /*To clip down text.*/
+}
+
+.box5{
+    width: 30vw;
+    height: 10vh;
+    margin: 10px;
+    border: 2px solid black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Shorthand - overflow: hidden auto;*/
+}

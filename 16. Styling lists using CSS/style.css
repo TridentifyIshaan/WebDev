@@ -1,0 +1,42 @@
+#one ul li{
+    list-style: devanagari;
+    background-color: lightcoral;
+    /*To make marker come inside the box*/
+    list-style-position:inside;
+    border: 2px solid black;
+}
+
+#two ul li{
+    background-color:lightgreen;
+    /*To make marker come inside the box*/
+    list-style-position:inside;
+    border: 2px solid black;
+    /*To change the list style to emotes*/
+    list-style-type: "🤩";
+}
+
+#three ul li{
+    background-color: lightpink;
+    /*To make marker come inside the box*/
+    list-style-position:inside;
+    border: 2px solid black;
+    /*To replace list with an image*/
+    list-style-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCSmFP5_oCKvn0oz7KbXBMA9rcCZJKjZndjQ&s");
+}
+/*To write all list style stuff in one line*/
+#four ul li{
+    background-color: lightblue;
+    /*To make marker come inside the box*/
+    list-style:inside url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCSmFP5_oCKvn0oz7KbXBMA9rcCZJKjZndjQ&s");
+    border: 2px solid black;
+}
+
+/*To make professional nav bar*/
+#five ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+#five{
+    display:flex;
+}
