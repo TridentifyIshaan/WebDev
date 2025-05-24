@@ -13,6 +13,21 @@
     B. text-shadow property is used to add shadow effects to text.
     Format:-     text-shadow: h-offset v-offset blur color;
 
+    C. outline property is used to create a line around an element, outside its border.
+    Format:-    outline: width style color;
+    1. width: Sets the outline width.
+    2. style: Determines the style of the outline such as solid, dotted, or dashed.
+    3. color: Sets the outline color.
+
+    D. Difference between border and outline:
+    While both can visually appear similar, outlines differ from borders in a few ways:
+
+    1. Position: Outlines don't take up space; they're drawn around the element, outside of any border.
+    2. Offset: Using the outline-offset property, you can set the space between an outline and the edge or border of an element.
+    3. Width: Borders can have varying widths on different sides, outlines have a uniform width.
+    4. Rounded Corners: Borders can have rounded corners using border-radius, while outlines generally cannot.
+
+
 */
 
 
@@ -22,11 +37,16 @@
 }
 
 .box{
-    border: 2px solid black;
     padding: 20px;
-    margin: 10px;
-    box-shadow: 1px 6px 3px 3px red;
-    font-weight: bold;
+    margin: 10px;font-weight: bold;
     color: lightblue;
+    background-color: crimson;
+    width: 77px;
+    
+    box-shadow: -5px -6px 6px 13px greenyellow;
     text-shadow: 1.5px 1.5px 2px blue;
+    border: 2px solid blue;
+    border-radius: 0.03%;
+    outline: 5px groove green;
+    outline-offset: 5px;
 }
