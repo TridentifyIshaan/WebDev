@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    border:2px solid blue;
+    /* display:inline; - Margin & padding from top will remain 0, hence we will use inline-block*/
+    /* Even width won't change at all */
+    display:inline-block;
+    width: 110px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.box1{
+    /*display:none;*/
+    /* display:none; - This will remove the element from the document flow */
+}
+
+.box1{
+    /*visibility: hidden;*/
+    /* visibility:hidden; - This will hide the element but it will still take up space in the document flow */
+}

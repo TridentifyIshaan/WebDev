@@ -1,0 +1,32 @@
+/*
+    CSS Shadows
+
+    A. box-shadow property is used to add shadow effects around an element's frame.
+    Format:-     box-shadow: h-offset v-offset blur spread color inset;
+
+    1. h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+    2. blur: The larger the value, the blurrier the shadow.
+    3. spread: Expands or shrinks the shadow size.
+    4. color: Defines the shadow color.
+    5. inset: Makes the shadow inner.
+
+    B. text-shadow property is used to add shadow effects to text.
+    Format:-     text-shadow: h-offset v-offset blur color;
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 1px 6px 3px 3px red;
+    font-weight: bold;
+    color: lightblue;
+    text-shadow: 1.5px 1.5px 2px blue;
+}
