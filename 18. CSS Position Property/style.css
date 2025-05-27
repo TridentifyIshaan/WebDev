@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    border: 2px solid black;
+    height: 733px;
+    width: 80vw;
+    padding: 3px;
+    margin: 3px;
+}
+.box5{
+    background-color: antiquewhite;
+    top: 0px;
+    position: sticky;
+    width: 100%;
+    height: 111px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 5;
+    /*Position sticky is a hybrid of relative and fixed positioning. It behaves like relative until a certain scroll position is reached, then it behaves like fixed. */
+}
+.box1{
+    background-color: lightblue;
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    /* This box is positioned absolutely relative to the nearest positioned ancestor (which is the body in this case) */
+    z-index: 4;
+}
+.box2{
+    background-color: azure;
+    top: 50px;
+    left: 50px;
+    position: relative;
+    z-index: 3;
+    /* This box is positioned relative to its normal (static) position */
+}
+.box3{
+    background-color: aqua;
+    top: 30px;
+    left: 30px;
+    position: relative;
+    z-index: 2;
+    /*Z-index more than 1 will make the box position at the front, the order of value matters here.*/
+}
+.box4{
+    background-color: aquamarine;
+    top: 200px;
+    left: 1vw;
+    position: fixed;
+    /*Position is fixed even when you scroll things*/
+    z-index: 1;
+}
+
+.parent{
+    padding: 3px;
+    margin: 8px;
+    border: 3px solid purple;
+    /*If we keep parent's position also obsolute then the box 1 will be relative to parent class rather than body of the HTML*/
+
+    /*Exception: Transform, filter or perspective properties can also make an element appear as positioned*/
+    
+    /* transform: translate(0); */
+    /* see the change in box 1's position by switching the above line on and off*/
+
+    filter: invert(); /*To convert colors*/
+
+    /* Simolarly for perspective */
+    perspective: 0;
+}
