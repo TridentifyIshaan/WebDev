@@ -1,0 +1,71 @@
+img{
+    float: right;
+    margin-left: 10px;
+}
+
+.cards{
+    border: 2px solid black;
+    display: flow-root; /* Ensures that the container clears its floated children */
+}
+
+.card{
+    border: 2px solid red;
+}
+
+.card:nth-child(4){ /*Since image is also the child*/
+    background-color: aqua;
+    clear:both; /*left, right, both*/
+}
+
+.card::first-line{
+    font-weight: bold;
+}
+
+.card::first-letter{
+    color: blue;
+}
+
+/*To apply to all the elements of cards*/
+.cards *{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/*Grouping - to apply to all the elements of cards*/
+img, .card, [data-color="primary"]{
+    margin-right: 10px;
+}
+/* nth-child selectors */
+.card:nth-child(odd){
+    background-color: lightgreen;
+}
+/* nth-child with a formula */
+.card:nth-last-child(3){
+    background-color: lightpink
+}
+/* Dynamic insertion of content using CSS */
+.cards::before{
+    content: "Cards Section";
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* After */
+.cards::after{
+    content: "End of Cards Section";
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+/*On selection of the text present inside the card*/
+.card::selection{
+    background-color: red;
+    color: yellow;
+}
+
+/*Style on placeholder*/
+input::placeholder{
+    color:brown;
+}
