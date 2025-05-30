@@ -29,7 +29,7 @@ header {
 
 nav {
     background-color: var(--primary-color);
-    height: 55px;
+    height: 70px;
     padding: 0 20px;
     font-weight: bold;
     display: flex;
@@ -56,6 +56,8 @@ nav ul li {
     font-family: var(--prim-font-fam);
     transition: background 0.2s, color 0.2s;
     cursor: pointer;
+    /*Skew property of transform*/
+    transform: skew(2.5deg);
 }
 
 nav ul li:hover {
@@ -121,6 +123,8 @@ main {
     padding: 32px 24px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     box-sizing: border-box;
+    /*Skew property of transform in Y direction*/
+    transform: skewY(-1.5deg);
 }
 
 .box1 h2, .box2 h2 {
@@ -171,13 +175,35 @@ main {
     position: fixed;
     bottom: 18px;
     right: 28px;
-    border-radius: 60px;
     border: 2px solid var(--universal-color);
     box-shadow: 0 2px 8px rgba(0,0,0,0.13);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* border-radius: 60px; */
     z-index: 100;
+
+    /* Aligning the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Transform*/
+    /*NOTE- Only one transform property can be applied at a time, so choose one of the following but if you want to apply multiple transforms, you can chain them together like this: transform: rotate(45deg) translate(-20%, 10%); */
+    
+    /*Rotation*/
+    /* transform: rotate(45deg); OR rotate(.125turn); */
+
+    /*Scale - enlarge or shrink the box*/
+    /* Translation - move the box */
+    /* transform:  scale(1.2) translate(-20%, 10%); */
+    
+    /*Transform origin - change the point around which the box rotates or scales*/
+    /* transform: origin 0% 0%; */
+
+    /*Transitions & Transforms*/
+    transition: transform 0.5s ease; /* Adjust the duration and easing as needed */
+}
+
+.orange-box:hover{
+  transform: rotate(1.125turn);
 }
 
 .orange-box img {
@@ -227,5 +253,40 @@ footer {
     nav ul li {
         font-size: 16px;
         padding: 6px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 12px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        padding: 8px 18px;
+        font-size: 18px;
+        border: 2px solid var(--text-color-light);
+        box-shadow: 2px 2px 0px green;
+        transform: skew(2.5deg);
+        font-family: var(--prim-font-fam);
+        color: var(--universal-color);
+        background-color: var(--primary-color);
+        transition: background 0.2s, color 0.2s;
+    }
+
+    nav ul li:hover {
+        background: var(--tertiary-color);
+        color: var(--primary-color);
     }
 }
