@@ -1,0 +1,65 @@
+.box {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 70px;
+    position: absolute;
+    outline: 2px solid black;
+    bottom: 9px;
+    left: 10px;
+    animation: bounce 2s ease-in-out 1s infinite forwards;
+}
+
+.rectangle {
+    height: 1vh;
+    width: 100%;
+    background-color: greenyellow;
+    position: absolute;
+    bottom: 0px;
+    left: 0px; 
+}
+
+.container {
+    position: relative;
+    height: 80vh;
+    width: 80vw;
+    background-color: blue;
+    overflow: hidden; /* Ensures ball stays inside */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+/* Responsive bounce animation using calc to keep the ball inside */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        /* Ball goes up to the top, but stays inside the container */
+        transform: translateY(calc(-1 * (80vh - 59px))); /*This calculation ensures the ball bounces within the container height*/
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            /* Ball goes up to the top, but stays inside the container */
+            transform: translateY(calc(-1 * (70vh - 59px)));
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+}
