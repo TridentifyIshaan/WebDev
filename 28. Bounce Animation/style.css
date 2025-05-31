@@ -7,7 +7,8 @@
     outline: 2px solid black;
     bottom: 9px;
     left: 10px;
-    animation: bounce 2s ease-in-out 1s infinite forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: bounceX 3s linear 1s infinite , bounceY 1s ease-out 1s infinite alternate;
 }
 
 .rectangle {
@@ -35,31 +36,21 @@
     }
 }
 
-/* Responsive bounce animation using calc to keep the ball inside */
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
+@keyframes bounceX {
+    from {
+        left: 0px;
     }
-    50% {
-        /* Ball goes up to the top, but stays inside the container */
-        transform: translateY(calc(-1 * (80vh - 59px))); /*This calculation ensures the ball bounces within the container height*/
+    to{
+        left: 100%;
     }
-    100% {
-        transform: translateY(0);
-    }
+    
 }
 
-@media (max-width: 600px) {
-    @keyframes bounce {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            /* Ball goes up to the top, but stays inside the container */
-            transform: translateY(calc(-1 * (70vh - 59px)));
-        }
-        100% {
-            transform: translateY(0);
-        }
+@keyframes bounceY {
+    from {
+        bottom: 0px;
+    }
+    to{
+        bottom: 100%;
     }
 }
